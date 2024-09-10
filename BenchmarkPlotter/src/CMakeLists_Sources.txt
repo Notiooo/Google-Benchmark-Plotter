@@ -1,0 +1,9 @@
+set(PROJECT_SOURCES
+        Application.cpp
+        pch.cpp
+        States/State.cpp
+        States/StateStack.cpp
+        States/CustomStates/ExitApplicationState.cpp
+        States/CustomStates/MainAppOpen.cpp
+        Utils/ImGuiLog.cpp
+        )

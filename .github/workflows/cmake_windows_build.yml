@@ -1,0 +1,20 @@
+name: Windows Build
+
+on: [ push, pull_request ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        build_type: [Debug, Release]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Configure CMake Build
+        run: cmake -S ${{github.workspace}}/BenchmarkPlotter -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{matrix.build_type}}
+
+      - name: Build
+        run: cmake --build ${{github.workspace}}/build --config ${{matrix.build_type}} --target BenchmarkPlotterApp
+
