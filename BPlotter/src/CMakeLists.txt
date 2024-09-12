@@ -40,6 +40,10 @@ target_link_libraries(BPlotterSrc
         spdlog
 )
 
+if(CMAKE_BUILD_TYPE STREQUAL "Release")
+    target_link_libraries(BPlotterSrc PUBLIC SFML::Main)
+endif()
+
 # Remove previous engine resources
 
 add_custom_command(TARGET BPlotterSrc PRE_BUILD
@@ -64,5 +68,9 @@ add_custom_command(
 )
 
 
-add_executable(BPlotterApp main.cpp)
+if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+    add_executable(BPlotterApp main.cpp)
+else()
+    add_executable(BPlotterApp WIN32 main.cpp)
+endif()
 target_link_libraries(BPlotterApp PRIVATE BPlotterSrc)
