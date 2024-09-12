@@ -7,7 +7,7 @@
 #include "States/StateStack.hpp"
 #include "Utils/ImGuiLog.hpp"
 
-namespace BenchmarkPlotter
+namespace BPlotter
 {
 
 /**
@@ -190,4 +190,4 @@ private:
     ImGuiLog mImguiLog;
 };
 
-}// namespace BenchmarkPlotter
+}// namespace BPlotter

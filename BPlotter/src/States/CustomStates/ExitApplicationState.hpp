@@ -2,7 +2,7 @@
 
 #include "States/State.hpp"
 
-namespace BenchmarkPlotter
+namespace BPlotter
 {
 
 class StateStack;
@@ -16,4 +16,4 @@ public:
     explicit ExitApplicationState(StateStack& stack);
 };
 
-}// namespace BenchmarkPlotter
+}// namespace BPlotter

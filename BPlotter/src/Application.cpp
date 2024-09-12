@@ -5,7 +5,7 @@
 
 #include <spdlog/sinks/stdout_color_sinks.h>
 
-namespace BenchmarkPlotter
+namespace BPlotter
 {
 
 /**
@@ -55,7 +55,7 @@ void Application::setupFlowStates()
 }
 
 Application::Application()
-    : mWindow(sf::VideoMode({SCREEN_WIDTH, SCREEN_HEIGHT}), "BenchmarkPlotter")
+    : mWindow(sf::VideoMode({SCREEN_WIDTH, SCREEN_HEIGHT}), "BPlotter")
 {
     loadResources();
     configureImGui();
@@ -306,4 +306,4 @@ void Application::setupImGuiStyle()
     style.ChildRounding = 4;
 }
 
-}// namespace BenchmarkPlotter
+}// namespace BPlotter

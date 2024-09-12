@@ -3,7 +3,7 @@
 #include "pch.hpp"
 #include <ranges>
 
-namespace BenchmarkPlotter
+namespace BPlotter
 {
 
 auto StateStack::createState(const State_ID& stateID)
@@ -165,4 +165,4 @@ void StateStack::forceInstantClear()
     mStack.clear();
 }
 
-}// namespace BenchmarkPlotter
+}// namespace BPlotter

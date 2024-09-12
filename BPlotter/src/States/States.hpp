@@ -1,6 +1,6 @@
 #pragma once
 
-namespace BenchmarkPlotter
+namespace BPlotter
 {
 
 /**
@@ -33,4 +33,4 @@ inline std::string toString(State_ID stateId)
     }
 }
 
-}// namespace BenchmarkPlotter
+}// namespace BPlotter

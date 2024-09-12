@@ -16,8 +16,8 @@ jobs:
 
     - name: Build (Release)
       run: |
-        cmake -S ${{github.workspace}}/BenchmarkPlotter -B ${{github.workspace}}/build-release -DCMAKE_BUILD_TYPE=Release
-        cmake --build ${{github.workspace}}/build-release --config Release --target BenchmarkPlotterApp
+        cmake -S ${{github.workspace}}/BPlotter -B ${{github.workspace}}/build-release -DCMAKE_BUILD_TYPE=Release
+        cmake --build ${{github.workspace}}/build-release --config Release --target BPlotterApp
 
     - name: Package (Release)
       run: |
@@ -25,14 +25,14 @@ jobs:
 
     - name: Build (Debug)
       run: |
-        cmake -S ${{github.workspace}}/BenchmarkPlotter -B ${{github.workspace}}/build-debug -DCMAKE_BUILD_TYPE=Debug
-        cmake --build ${{github.workspace}}/build-debug --config Debug --target BenchmarkPlotterApp
+        cmake -S ${{github.workspace}}/BPlotter -B ${{github.workspace}}/build-debug -DCMAKE_BUILD_TYPE=Debug
+        cmake --build ${{github.workspace}}/build-debug --config Debug --target BPlotterApp
 
     - name: Package (Debug)
       run: |
         $sourcePath = "${{github.workspace}}/build-debug/src/Debug"
         $excludeExtensions = @('.pdb', '.ilk', '.cmake')
-        $excludeFiles = @('BenchmarkPlotterSrc.lib')
+        $excludeFiles = @('BPlotterSrc.lib')
         $excludeFolders = @('custom_includes', 'CMakeFiles')
         Get-ChildItem -Path $sourcePath -Recurse | Where-Object { $excludeExtensions -contains $_.Extension } | Remove-Item -Force
         foreach ($file in $excludeFiles) 

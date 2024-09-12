@@ -2,7 +2,7 @@
 
 #include "States/State.hpp"
 
-namespace BenchmarkPlotter
+namespace BPlotter
 {
 
 class StateStack;
@@ -46,4 +46,4 @@ public:
     bool updateImGui(float deltaTime) override;
 };
 
-}// namespace BenchmarkPlotter
+}// namespace BPlotter

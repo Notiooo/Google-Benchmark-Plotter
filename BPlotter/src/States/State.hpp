@@ -1,7 +1,7 @@
 #pragma once
 #include "States.hpp"
 
-namespace BenchmarkPlotter
+namespace BPlotter
 {
 
 class StateStack;
@@ -83,4 +83,4 @@ private:
     StateStack& mStack;//!< Pointer to the stack containing this state
 };
 
-}// namespace BenchmarkPlotter
+}// namespace BPlotter

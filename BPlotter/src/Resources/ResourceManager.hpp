@@ -3,7 +3,7 @@
 #include <map>
 #include <memory>
 
-namespace BenchmarkPlotter
+namespace BPlotter
 {
 
 // It may not hold sf::Music as it is different starting with openFromFile()
@@ -161,4 +161,4 @@ void ResourceManager<Resource, Identifier>::storeResource(Identifier id,
     // for Release version of the program is optimized as it ignores this line.
 }
 
-}// namespace BenchmarkPlotter
+}// namespace BPlotter

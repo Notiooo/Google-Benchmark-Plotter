@@ -1,7 +1,7 @@
 #include "ExitApplicationState.hpp"
 #include "pch.hpp"
 
-namespace BenchmarkPlotter
+namespace BPlotter
 {
 
 ExitApplicationState::ExitApplicationState(StateStack& stack)
@@ -9,4 +9,4 @@ ExitApplicationState::ExitApplicationState(StateStack& stack)
 {
 }
 
-}// namespace BenchmarkPlotter
+}// namespace BPlotter

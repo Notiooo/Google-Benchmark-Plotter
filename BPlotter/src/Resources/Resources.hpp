@@ -4,7 +4,7 @@
 #include <SFML/Graphics/Font.hpp>
 #include <SFML/Graphics/Texture.hpp>
 
-namespace BenchmarkPlotter
+namespace BPlotter
 {
 
 class Player;
@@ -46,4 +46,4 @@ struct ApplicationResources
     FontManager fontManager;
 };
 
-}// namespace BenchmarkPlotter
+}// namespace BPlotter

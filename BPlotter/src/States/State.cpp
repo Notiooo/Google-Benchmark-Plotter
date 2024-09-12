@@ -3,7 +3,7 @@
 
 #include "StateStack.hpp"
 
-namespace BenchmarkPlotter
+namespace BPlotter
 {
 
 State::State(StateStack& stack)
@@ -72,4 +72,4 @@ State_ID State::requestStateOnTop() const noexcept
     return mStack.top();
 }
 
-}// namespace BenchmarkPlotter
+}// namespace BPlotter

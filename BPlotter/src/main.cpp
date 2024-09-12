@@ -16,7 +16,7 @@ int main()
 
     try
     {
-        const auto application = std::make_unique<BenchmarkPlotter::Application>();
+        const auto application = std::make_unique<BPlotter::Application>();
         application->run();
     }
     catch (const std::exception& e)

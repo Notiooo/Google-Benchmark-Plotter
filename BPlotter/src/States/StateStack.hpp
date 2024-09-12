@@ -7,7 +7,7 @@
 #include "State.hpp"
 #include "States.hpp"
 
-namespace BenchmarkPlotter
+namespace BPlotter
 {
 
 /**
@@ -245,4 +245,4 @@ void StateStack::saveState(State_ID stateID, Args&&... args)
     };
 }
 
-}// namespace BenchmarkPlotter
+}// namespace BPlotter

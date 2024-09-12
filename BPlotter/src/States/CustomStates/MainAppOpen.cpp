@@ -1,7 +1,7 @@
 #include "MainAppOpen.hpp"
 #include "pch.hpp"
 
-namespace BenchmarkPlotter
+namespace BPlotter
 {
 
 MainAppOpen::MainAppOpen(StateStack& stack)
@@ -28,4 +28,4 @@ bool MainAppOpen::updateImGui(const float deltaTime)
     return true;
 }
 
-}// namespace BenchmarkPlotter
+}// namespace BPlotter

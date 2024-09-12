@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.24)
 
-project(BenchmarkPlotterTests LANGUAGES CXX)
+project(BPlotterTests LANGUAGES CXX)
 
 include_directories(../src)
 
@@ -37,27 +37,27 @@ include_directories(mocks/src)
 list(TRANSFORM UT_Sources PREPEND ut/)
 list(TRANSFORM Mocks_Sources PREPEND mocks/)
 
-add_executable(BenchmarkPlotterTests
+add_executable(BPlotterTests
         main.cpp
         ${UT_Sources}
         ${Mocks_Sources}
 )
 
-target_link_libraries(BenchmarkPlotterTests PRIVATE BenchmarkPlotterSrc)
-target_link_libraries(BenchmarkPlotterTests PRIVATE gtest gtest_main)
-target_link_libraries(BenchmarkPlotterTests PRIVATE gmock gmock_main)
+target_link_libraries(BPlotterTests PRIVATE BPlotterSrc)
+target_link_libraries(BPlotterTests PRIVATE gtest gtest_main)
+target_link_libraries(BPlotterTests PRIVATE gmock gmock_main)
 
 
 # Remove previous application resources
 
-add_custom_command(TARGET BenchmarkPlotterTests PRE_BUILD
+add_custom_command(TARGET BPlotterTests PRE_BUILD
         COMMAND ${CMAKE_COMMAND} -E remove_directory
-        $<TARGET_FILE_DIR:BenchmarkPlotterTests>/resources
+        $<TARGET_FILE_DIR:BPlotterTests>/resources
 )
 
 # Copy application resources
 
-add_custom_command(TARGET BenchmarkPlotterTests POST_BUILD
+add_custom_command(TARGET BPlotterTests POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy_directory
-        ${CMAKE_SOURCE_DIR}/resources $<TARGET_FILE_DIR:BenchmarkPlotterTests>/resources
+        ${CMAKE_SOURCE_DIR}/resources $<TARGET_FILE_DIR:BPlotterTests>/resources
 )
