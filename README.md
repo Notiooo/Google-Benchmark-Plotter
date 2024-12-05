@@ -24,3 +24,4 @@ As the app is still being developed there are no instructions on how to use it y
 - **[gtest](https://github.com/google/googletest)** - Google Test framework for C++ unit testing.
 - **[gmock](https://github.com/google/googletest/tree/main/googlemock)** - Google Mock framework for C++ mocking.
 - **[gbenchmark](https://github.com/google/benchmark)** - A microbenchmark support library for C++.
+- **[implot](https://github.com/epezent/implot)** - Immediate mode, GPU accelerated plotting library for Dear ImGui.
