@@ -22,6 +22,7 @@
 // OpenGL
 #include "imgui-SFML.h"
 #include <imgui.h>
+#include <implot.h>
 
 // Logging
 #include "spdlog/spdlog.h"

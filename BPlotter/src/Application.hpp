@@ -22,6 +22,7 @@ class Application
 {
 public:
     Application();
+    ~Application();
     /**
      * \brief Starts the engine and keeps it running until the user finishes it.
      *

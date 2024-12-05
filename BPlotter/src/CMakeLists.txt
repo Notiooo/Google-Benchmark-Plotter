@@ -38,6 +38,7 @@ target_link_libraries(BPlotterSrc
         SFML::System
         ImGui-SFML::ImGui-SFML
         spdlog
+        implot
 )
 
 if(CMAKE_BUILD_TYPE STREQUAL "Release")

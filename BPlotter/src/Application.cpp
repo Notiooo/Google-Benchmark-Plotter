@@ -42,10 +42,12 @@ void Application::configureImGui()
     {
         spdlog::critical("Imgui-SFML not initialized properly");
     }
+    ImPlot::CreateContext();
     setupImGuiStyle();
     if (auto& io = ImGui::GetIO(); !(io.ConfigFlags & ImGuiConfigFlags_DockingEnable))
     {
         io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
+        io.BackendFlags |= ImGuiBackendFlags_RendererHasVtxOffset;
     }
 }
 void Application::setupFlowStates()
@@ -61,6 +63,12 @@ Application::Application()
     configureImGui();
     setupFlowStates();
     mAppStack.push(State_ID::MainAppOpen);
+}
+
+Application::~Application()
+{
+    ImPlot::DestroyContext();
+    ImGui::SFML::Shutdown();
 }
 
 void Application::run()
