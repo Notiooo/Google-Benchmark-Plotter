@@ -86,6 +86,7 @@ void Application::performApplicationLoop()
     sf::Clock clock;
     auto frameTimeElapsed = sf::Time::Zero;
     mFixedUpdateClock.restart();
+    mWindow.requestFocus();
     while (isApplicationRunning)
     {
         frameTimeElapsed = clock.restart();
