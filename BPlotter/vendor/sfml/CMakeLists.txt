@@ -3,7 +3,7 @@ message(STATUS "Fetching SFML 3...")
 FetchContent_Declare(
         SFML
         GIT_REPOSITORY https://github.com/SFML/SFML.git
-        GIT_TAG 016e201d179966fa4940d5d04d0f96bd72fce01c # SFML 3
+        GIT_TAG f930cbc562a31ebdb09aaf2c37d77a33f8de987d # SFML 3
 )
 
 # No need to build network modules
