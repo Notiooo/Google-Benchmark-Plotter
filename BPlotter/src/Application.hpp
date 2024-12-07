@@ -7,6 +7,8 @@
 #include "States/StateStack.hpp"
 #include "Utils/ImGuiLog.hpp"
 
+#include <SFML/Graphics/Image.hpp>
+
 namespace BPlotter
 {
 
@@ -189,6 +191,11 @@ private:
      * \brief The ImGui log object that stores the logs displayed in the application.
      */
     ImGuiLog mImguiLog;
+
+    /**
+     * The main application icon
+     */
+    sf::Image mIcon;
 };
 
 }// namespace BPlotter

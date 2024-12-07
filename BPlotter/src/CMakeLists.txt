@@ -70,10 +70,14 @@ add_custom_command(
         COMMENT "Ensure imgui.ini exists in the target directory."
 )
 
-
-if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-    add_executable(BPlotterApp main.cpp)
+if(WIN32)
+    if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+        add_executable(BPlotterApp main.cpp ${CMAKE_SOURCE_DIR}/resources.rc)
+    else()
+        add_executable(BPlotterApp WIN32 main.cpp ${CMAKE_SOURCE_DIR}/resources.rc)
+    endif()
 else()
-    add_executable(BPlotterApp WIN32 main.cpp)
+    add_executable(BPlotterApp main.cpp)
 endif()
+
 target_link_libraries(BPlotterApp PRIVATE BPlotterSrc)

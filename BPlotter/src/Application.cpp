@@ -58,7 +58,9 @@ void Application::setupFlowStates()
 
 Application::Application()
     : mWindow(sf::VideoMode({SCREEN_WIDTH, SCREEN_HEIGHT}), "BPlotter")
+    , mIcon("resources/icons/icon-96x96.png")
 {
+    mWindow.setIcon(mIcon);
     loadResources();
     configureImGui();
     setupFlowStates();
