@@ -28,5 +28,5 @@
 #include "spdlog/spdlog.h"
 
 // Other
-#include <result.hpp>
 #include <nlohmann/json.hpp>
+#include <result.hpp>
