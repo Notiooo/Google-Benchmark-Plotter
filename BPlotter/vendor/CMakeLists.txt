@@ -7,3 +7,4 @@ include(implot/CMakeLists.txt)
 
 add_subdirectory(spdlog)
 add_subdirectory(result)
+add_subdirectory(nlohmann_json)

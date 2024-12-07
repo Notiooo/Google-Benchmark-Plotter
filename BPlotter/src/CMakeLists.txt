@@ -39,6 +39,7 @@ target_link_libraries(BPlotterSrc
         ImGui-SFML::ImGui-SFML
         spdlog
         implot
+        nlohmann_json
 )
 
 if(CMAKE_BUILD_TYPE STREQUAL "Release")
