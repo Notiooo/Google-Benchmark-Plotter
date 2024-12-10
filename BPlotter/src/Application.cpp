@@ -3,6 +3,7 @@
 
 #include "States/CustomStates/ExitApplicationState.hpp"
 
+#include "Utils/UpdateChecker.hpp"
 #include <spdlog/sinks/stdout_color_sinks.h>
 
 namespace BPlotter
@@ -59,6 +60,7 @@ void Application::setupFlowStates()
 Application::Application()
     : mWindow(sf::VideoMode({SCREEN_WIDTH, SCREEN_HEIGHT}), "BPlotter")
     , mIcon("resources/icons/icon-96x96.png")
+    , mUpdateChecker("Notiooo", "Google-Benchmark-Plotter")
 {
     mWindow.setIcon(mIcon);
     loadResources();
@@ -169,18 +171,19 @@ void Application::updateImGui(const sf::Time& deltaTime)
                                     ImGuiWindowFlags_NoNavFocus;
     if (ImGui::Begin("Full-Screen Window", nullptr, window_flags))
     {
+        mAppStack.updateImGui(deltaTime.asSeconds());
         if (ImGui::BeginMainMenuBar())
         {
-            mAppStack.updateImGui(deltaTime.asSeconds());
             if (ImGui::BeginMenu("Help"))
             {
+                mUpdateChecker.updateCheckForUpdateButton();
                 updateImGuiLogger();
                 ImGui::EndMenu();
             }
+            ImGui::EndMainMenuBar();
         }
-        ImGui::EndMainMenuBar();
+        ImGui::End();
     }
-    ImGui::End();
 }
 
 void Application::processEvents()

@@ -6,6 +6,7 @@
 #include "Resources/Resources.hpp"
 #include "States/StateStack.hpp"
 #include "Utils/ImGuiLog.hpp"
+#include "Utils/UpdateChecker.hpp"
 
 #include <SFML/Graphics/Image.hpp>
 
@@ -196,6 +197,11 @@ private:
      * The main application icon
      */
     sf::Image mIcon;
+
+    /**
+     * Allows to check for available application updates
+     */
+    UpdateChecker mUpdateChecker;
 };
 
 }// namespace BPlotter

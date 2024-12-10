@@ -14,6 +14,15 @@ target_precompile_headers(BPlotterSrc PUBLIC pch.hpp)
 set(CUSTOM_INCLUDES_DIR ${CMAKE_CURRENT_BINARY_DIR}/custom_includes)
 file(MAKE_DIRECTORY ${CUSTOM_INCLUDES_DIR})
 
+execute_process(
+        COMMAND git describe --tags
+        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+        OUTPUT_VARIABLE GIT_TAG
+        OUTPUT_STRIP_TRAILING_WHITESPACE
+)
+add_definitions(-DGIT_TAG="${GIT_TAG}")
+
+
 set(CUSTOM_INCLUDES
         
 )

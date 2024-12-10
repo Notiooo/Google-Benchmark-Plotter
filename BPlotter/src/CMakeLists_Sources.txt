@@ -6,4 +6,5 @@ set(PROJECT_SOURCES
         States/CustomStates/ExitApplicationState.cpp
         States/CustomStates/MainAppOpen.cpp
         Utils/ImGuiLog.cpp
+        Utils/UpdateChecker.cpp
         )
