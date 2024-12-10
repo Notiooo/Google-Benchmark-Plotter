@@ -25,3 +25,9 @@ As the app is still being developed there are no instructions on how to use it y
 - **[gmock](https://github.com/google/googletest/tree/main/googlemock)** - Google Mock framework for C++ mocking.
 - **[gbenchmark](https://github.com/google/benchmark)** - A microbenchmark support library for C++.
 - **[implot](https://github.com/epezent/implot)** - Immediate mode, GPU accelerated plotting library for Dear ImGui.
+- **[httplib](https://github.com/yhirose/cpp-httplib)** - A C++ HTTP/HTTPS library for client and server communication.
+- **[semver](https://github.com/Neargye/semver)** - A Semantic Versioning library for C++.
+- **[OpenSSL](https://www.openssl.org/)** - A robust library for secure communication and cryptographic operations.
+- **[openssl-cmake](https://github.com/viaduck/openssl-cmake)** - CMake wrapper for OpenSSL supporting cross-compilation.
+- **[nlohmann/json](https://github.com/nlohmann/json)** - JSON for Modern C++: simple and intuitive JSON parsing.
+- **[ImGuiFileDialog](https://github.com/aiekick/ImGuiFileDialog)** - File Dialog for Dear ImGui, supporting file browsing and selection.
