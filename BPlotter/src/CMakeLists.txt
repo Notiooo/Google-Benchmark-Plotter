@@ -52,6 +52,7 @@ target_link_libraries(BPlotterSrc
         nlohmann_json
         ImGuiFileDialog
         ${NEEDED_HTTPLIB_LIBRARIES}
+        semver
 )
 
 if(CMAKE_BUILD_TYPE STREQUAL "Release")
