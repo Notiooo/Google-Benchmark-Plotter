@@ -31,6 +31,16 @@ target_include_directories(BPlotterSrc PUBLIC
         ${CUSTOM_INCLUDES_DIR}
 )
 
+set(NEEDED_HTTPLIB_LIBRARIES
+        httplib
+        ssl
+        crypto
+        ws2_32
+        crypt32
+        mingw32
+        gcc
+)
+
 target_link_libraries(BPlotterSrc
         PUBLIC
         SFML::Graphics
@@ -41,7 +51,7 @@ target_link_libraries(BPlotterSrc
         implot
         nlohmann_json
         ImGuiFileDialog
-        httplib
+        ${NEEDED_HTTPLIB_LIBRARIES}
 )
 
 if(CMAKE_BUILD_TYPE STREQUAL "Release")
