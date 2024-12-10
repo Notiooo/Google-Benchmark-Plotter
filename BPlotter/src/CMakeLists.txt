@@ -41,6 +41,7 @@ target_link_libraries(BPlotterSrc
         implot
         nlohmann_json
         ImGuiFileDialog
+        httplib
 )
 
 if(CMAKE_BUILD_TYPE STREQUAL "Release")
