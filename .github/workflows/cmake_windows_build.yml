@@ -12,9 +12,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Add MinGW to PATH
+        run: |
+          echo "Adding MinGW to PATH"
+          echo "C:\\msys64\\mingw64\\bin" >> $env:GITHUB_PATH
+
       - name: Configure CMake Build
-        run: cmake -S ${{github.workspace}}/BPlotter -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{matrix.build_type}}
+        run: cmake -S ${{github.workspace}}/BPlotter -B ${{github.workspace}}/build -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=${{matrix.build_type}}
 
       - name: Build
         run: cmake --build ${{github.workspace}}/build --config ${{matrix.build_type}} --target BPlotterApp
-

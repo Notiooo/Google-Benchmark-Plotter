@@ -42,12 +42,13 @@ target_include_directories(BPlotterSrc PUBLIC
 
 set(NEEDED_HTTPLIB_LIBRARIES
         httplib
-        ssl
         crypto
-        ws2_32
-        crypt32
-        mingw32
+        ssl
         gcc
+        msvcrt
+        ws2_32
+        gdi32
+        crypt32
 )
 
 target_link_libraries(BPlotterSrc
